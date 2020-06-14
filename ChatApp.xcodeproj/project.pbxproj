@@ -60,10 +60,13 @@
 		EE1E525224968922009A9594 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				EE1E527524968B86009A9594 /* Service */,
+				EE1E527424968B81009A9594 /* Extension */,
+				EE1E527324968B72009A9594 /* Models */,
+				EE1E527224968B6D009A9594 /* Views */,
+				EE1E527124968B55009A9594 /* Controller */,
 				EE1E525324968922009A9594 /* AppDelegate.swift */,
 				EE1E525524968922009A9594 /* SceneDelegate.swift */,
-				EE1E525724968922009A9594 /* FirstViewController.swift */,
-				EE1E525924968922009A9594 /* SecondViewController.swift */,
 				EE1E525B24968922009A9594 /* Main.storyboard */,
 				EE1E526124968926009A9594 /* Assets.xcassets */,
 				EE1E526324968926009A9594 /* LaunchScreen.storyboard */,
@@ -71,6 +74,43 @@
 				EE1E525E24968922009A9594 /* ChatApp.xcdatamodeld */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		EE1E527124968B55009A9594 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E525724968922009A9594 /* FirstViewController.swift */,
+				EE1E525924968922009A9594 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE1E527224968B6D009A9594 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE1E527324968B72009A9594 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE1E527424968B81009A9594 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EE1E527524968B86009A9594 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
