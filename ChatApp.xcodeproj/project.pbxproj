@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		EE1E526224968926009A9594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1E526124968926009A9594 /* Assets.xcassets */; };
 		EE1E526524968926009A9594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1E526324968926009A9594 /* LaunchScreen.storyboard */; };
 		EE1E527724969513009A9594 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE1E527624969513009A9594 /* GoogleService-Info.plist */; };
+		EE1E527924969858009A9594 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527824969858009A9594 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EE1E526424968926009A9594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1E526624968926009A9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E527624969513009A9594 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE1E527824969858009A9594 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,6 @@
 				620BF22DCF4C0F205C93C680 /* Pods-ChatApp.debug.xcconfig */,
 				52914F2AA1B5FB9E5A223719 /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +138,7 @@
 		EE1E527524968B86009A9594 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EE1E527824969858009A9594 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 				EE1E525A24968922009A9594 /* SecondViewController.swift in Sources */,
 				EE1E525824968922009A9594 /* FirstViewController.swift in Sources */,
 				EE1E525424968922009A9594 /* AppDelegate.swift in Sources */,
+				EE1E527924969858009A9594 /* DataService.swift in Sources */,
 				EE1E525624968922009A9594 /* SceneDelegate.swift in Sources */,
 				EE1E526024968922009A9594 /* ChatApp.xcdatamodeld in Sources */,
 			);
