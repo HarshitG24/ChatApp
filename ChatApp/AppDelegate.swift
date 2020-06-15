@@ -13,11 +13,21 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        // with the below code, we are trying to load a vc above the initial vc
+        if Auth.auth().currentUser == nil{ // bundle.main is to access storyboard
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let authVc = storyboard.instantiateViewController(identifier: "AuthVC")
+            authVc.modalPresentationStyle = .overFullScreen
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(authVc, animated: true, completion: nil)
+        }
+        
         return true
     }
 

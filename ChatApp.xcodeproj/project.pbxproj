@@ -10,14 +10,19 @@
 		7F2DD86C320E2A078BF6E90A /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AD9B31C718335335624171 /* Pods_ChatApp.framework */; };
 		EE1E525424968922009A9594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525324968922009A9594 /* AppDelegate.swift */; };
 		EE1E525624968922009A9594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525524968922009A9594 /* SceneDelegate.swift */; };
-		EE1E525824968922009A9594 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525724968922009A9594 /* FirstViewController.swift */; };
-		EE1E525A24968922009A9594 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525924968922009A9594 /* SecondViewController.swift */; };
+		EE1E525824968922009A9594 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525724968922009A9594 /* FeedVC.swift */; };
+		EE1E525A24968922009A9594 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525924968922009A9594 /* GroupsVC.swift */; };
 		EE1E525D24968922009A9594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1E525B24968922009A9594 /* Main.storyboard */; };
 		EE1E526024968922009A9594 /* ChatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE1E525E24968922009A9594 /* ChatApp.xcdatamodeld */; };
 		EE1E526224968926009A9594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1E526124968926009A9594 /* Assets.xcassets */; };
 		EE1E526524968926009A9594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1E526324968926009A9594 /* LaunchScreen.storyboard */; };
 		EE1E527724969513009A9594 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE1E527624969513009A9594 /* GoogleService-Info.plist */; };
 		EE1E527924969858009A9594 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527824969858009A9594 /* DataService.swift */; };
+		EE1E527B24977591009A9594 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527A24977591009A9594 /* AuthVC.swift */; };
+		EE1E527D2497759D009A9594 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527C2497759D009A9594 /* LoginVC.swift */; };
+		EE1E527F24977671009A9594 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527E24977671009A9594 /* InsetTextField.swift */; };
+		EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528024977A9F009A9594 /* ShadowView.swift */; };
+		EE1E528324977D06009A9594 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528224977D06009A9594 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +32,8 @@
 		EE1E525024968922009A9594 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1E525324968922009A9594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE1E525524968922009A9594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE1E525724968922009A9594 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EE1E525924968922009A9594 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EE1E525724968922009A9594 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		EE1E525924968922009A9594 /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		EE1E525C24968922009A9594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE1E525F24968922009A9594 /* ChatApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatApp.xcdatamodel; sourceTree = "<group>"; };
 		EE1E526124968926009A9594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +41,11 @@
 		EE1E526624968926009A9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1E527624969513009A9594 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE1E527824969858009A9594 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EE1E527A24977591009A9594 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		EE1E527C2497759D009A9594 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EE1E527E24977671009A9594 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		EE1E528024977A9F009A9594 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		EE1E528224977D06009A9594 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +118,10 @@
 		EE1E527124968B55009A9594 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EE1E525724968922009A9594 /* FirstViewController.swift */,
-				EE1E525924968922009A9594 /* SecondViewController.swift */,
+				EE1E525724968922009A9594 /* FeedVC.swift */,
+				EE1E525924968922009A9594 /* GroupsVC.swift */,
+				EE1E527A24977591009A9594 /* AuthVC.swift */,
+				EE1E527C2497759D009A9594 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +129,8 @@
 		EE1E527224968B6D009A9594 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE1E527E24977671009A9594 /* InsetTextField.swift */,
+				EE1E528024977A9F009A9594 /* ShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1E527824969858009A9594 /* DataService.swift */,
+				EE1E528224977D06009A9594 /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -259,12 +274,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1E525A24968922009A9594 /* SecondViewController.swift in Sources */,
-				EE1E525824968922009A9594 /* FirstViewController.swift in Sources */,
+				EE1E525A24968922009A9594 /* GroupsVC.swift in Sources */,
+				EE1E525824968922009A9594 /* FeedVC.swift in Sources */,
+				EE1E527D2497759D009A9594 /* LoginVC.swift in Sources */,
 				EE1E525424968922009A9594 /* AppDelegate.swift in Sources */,
+				EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */,
+				EE1E528324977D06009A9594 /* AuthService.swift in Sources */,
 				EE1E527924969858009A9594 /* DataService.swift in Sources */,
+				EE1E527B24977591009A9594 /* AuthVC.swift in Sources */,
 				EE1E525624968922009A9594 /* SceneDelegate.swift in Sources */,
 				EE1E526024968922009A9594 /* ChatApp.xcdatamodeld in Sources */,
+				EE1E527F24977671009A9594 /* InsetTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
