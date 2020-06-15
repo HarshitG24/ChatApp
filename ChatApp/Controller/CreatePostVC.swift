@@ -19,6 +19,7 @@ class CreatePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         thePost.delegate = self
+        sendbtn.bindToKeyboard()
     }
     
     @IBAction func uploadToFirebase(_ sender: Any) {
