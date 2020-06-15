@@ -41,4 +41,15 @@ class DataService{
     func addUserDB(uid: String,userData: Dictionary<String, Any>){
         _REF_USERS.child(uid).updateChildValues(userData)
     }
+    
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, uploadComplete: @escaping (_ status: Bool) -> ()){
+        
+        if groupKey != nil{
+            // send to group ref
+        }else{
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            uploadComplete(true)
+        }
+        
+    }
 }
