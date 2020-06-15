@@ -23,6 +23,7 @@
 		EE1E527F24977671009A9594 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E527E24977671009A9594 /* InsetTextField.swift */; };
 		EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528024977A9F009A9594 /* ShadowView.swift */; };
 		EE1E528324977D06009A9594 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528224977D06009A9594 /* AuthService.swift */; };
+		EE1E52852497AE2E009A9594 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52842497AE2E009A9594 /* MeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EE1E527E24977671009A9594 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		EE1E528024977A9F009A9594 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		EE1E528224977D06009A9594 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EE1E52842497AE2E009A9594 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				EE1E525924968922009A9594 /* GroupsVC.swift */,
 				EE1E527A24977591009A9594 /* AuthVC.swift */,
 				EE1E527C2497759D009A9594 /* LoginVC.swift */,
+				EE1E52842497AE2E009A9594 /* MeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				EE1E525824968922009A9594 /* FeedVC.swift in Sources */,
 				EE1E527D2497759D009A9594 /* LoginVC.swift in Sources */,
 				EE1E525424968922009A9594 /* AppDelegate.swift in Sources */,
+				EE1E52852497AE2E009A9594 /* MeVC.swift in Sources */,
 				EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */,
 				EE1E528324977D06009A9594 /* AuthService.swift in Sources */,
 				EE1E527924969858009A9594 /* DataService.swift in Sources */,
