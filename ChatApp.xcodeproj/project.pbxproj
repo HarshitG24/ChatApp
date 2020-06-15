@@ -26,6 +26,8 @@
 		EE1E52852497AE2E009A9594 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52842497AE2E009A9594 /* MeVC.swift */; };
 		EE1E52872497B7E7009A9594 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52862497B7E7009A9594 /* CreatePostVC.swift */; };
 		EE1E52892497BCD6009A9594 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52882497BCD6009A9594 /* UIViewExt.swift */; };
+		EE1E528B2497D3FA009A9594 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528A2497D3FA009A9594 /* FeedCell.swift */; };
+		EE1E528D2497D625009A9594 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528C2497D625009A9594 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		EE1E52842497AE2E009A9594 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		EE1E52862497B7E7009A9594 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		EE1E52882497BCD6009A9594 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		EE1E528A2497D3FA009A9594 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		EE1E528C2497D625009A9594 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			children = (
 				EE1E527E24977671009A9594 /* InsetTextField.swift */,
 				EE1E528024977A9F009A9594 /* ShadowView.swift */,
+				EE1E528A2497D3FA009A9594 /* FeedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 		EE1E527324968B72009A9594 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE1E528C2497D625009A9594 /* Feed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 				EE1E52852497AE2E009A9594 /* MeVC.swift in Sources */,
 				EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */,
 				EE1E528324977D06009A9594 /* AuthService.swift in Sources */,
+				EE1E528D2497D625009A9594 /* Feed.swift in Sources */,
 				EE1E527924969858009A9594 /* DataService.swift in Sources */,
 				EE1E527B24977591009A9594 /* AuthVC.swift in Sources */,
+				EE1E528B2497D3FA009A9594 /* FeedCell.swift in Sources */,
 				EE1E525624968922009A9594 /* SceneDelegate.swift in Sources */,
 				EE1E526024968922009A9594 /* ChatApp.xcdatamodeld in Sources */,
 				EE1E527F24977671009A9594 /* InsetTextField.swift in Sources */,
