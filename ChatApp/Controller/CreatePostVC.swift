@@ -22,6 +22,12 @@ class CreatePostVC: UIViewController {
         sendbtn.bindToKeyboard()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.userEmail.text = Auth.auth().currentUser?.email
+    }
+    
     @IBAction func uploadToFirebase(_ sender: Any) {
         
         if thePost.text != nil && thePost.text != "Write something here"{

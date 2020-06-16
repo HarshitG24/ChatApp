@@ -16,12 +16,13 @@ class AuthService{
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             guard let user = authResult?.user else {
+                print(error?.localizedDescription)
                 userCreationComplete(false, error)
                 return
             }
-            
+
             let userData = ["provider": user.providerID, "email": user.email]
-            
+
             DataService.instance.addUserDB(uid: user.uid, userData: userData as Dictionary<String, Any>)
             userCreationComplete(true, nil)
         }

@@ -19,9 +19,11 @@ class FeedVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DataService.instance.getAllFeedMessages { (feed) in
-            self.msgArr = feed
-            self.feedRows.reloadData()
+        DispatchQueue.main.async {
+             DataService.instance.getAllFeedMessages { (feed) in
+                self.msgArr = feed.reversed()
+                self.feedRows.reloadData()
+            }
         }
     }
 }
@@ -35,12 +37,12 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedcell", for: indexPath) as? FeedCell else {return UITableViewCell()}
-        
+       
         let msg = self.msgArr[indexPath.row]
         let image = UIImage(named: "defaultProfileImage")
-        
-        cell.configureCell(profile: image!, email: msg.senderId, content: msg.content)
-        
+        DataService.instance.getUsername(forUid: msg.senderId) { (email) in
+            cell.configureCell(profile: image!, email: email, content: msg.content)
+        }
         return cell
         
     }

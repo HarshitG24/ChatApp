@@ -34,21 +34,28 @@ class LoginVC: UIViewController {
                 vc?.modalPresentationStyle = .overFullScreen
                 self.present(vc!, animated: true, completion: nil)
             }else{
-                print(String(describing: error?.localizedDescription))
-            }
-            
-            AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!) { (bool, error) in
-                
-                if success {
-                    AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!) { (success, error) in
-                        
-                        if success{
-                          //  self.dismiss(animated: true, completion: nil)
-                          
+               // print(String(describing: error?.localizedDescription))
+                print("inside here...")
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!) { (status, error) in
+                    
+                    if status {
+                        print("account created")
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!) { (success, error) in
                             
-                        }else{
-                            print(String(describing: error?.localizedDescription))
+                            if success{
+                            self.dismiss(animated: true, completion: nil)
+                            
+                                let feedvc = self.storyboard?.instantiateViewController(identifier: "FirstVC") 
+                                feedvc?.modalPresentationStyle = .fullScreen
+                                self.present(feedvc!, animated: true, completion: nil)
+                              
+                                
+                            }else{
+                                print(String(describing: error?.localizedDescription))
+                            }
                         }
+                    }else{
+                        print("creation failure...")
                     }
                 }
             }
