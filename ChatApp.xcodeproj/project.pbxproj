@@ -28,6 +28,8 @@
 		EE1E52892497BCD6009A9594 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52882497BCD6009A9594 /* UIViewExt.swift */; };
 		EE1E528B2497D3FA009A9594 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528A2497D3FA009A9594 /* FeedCell.swift */; };
 		EE1E528D2497D625009A9594 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528C2497D625009A9594 /* Feed.swift */; };
+		EE1E528F249900CA009A9594 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528E249900CA009A9594 /* CreateGroupVC.swift */; };
+		EE1E52912499050D009A9594 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52902499050D009A9594 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		EE1E52882497BCD6009A9594 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		EE1E528A2497D3FA009A9594 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		EE1E528C2497D625009A9594 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		EE1E528E249900CA009A9594 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
+		EE1E52902499050D009A9594 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 				EE1E527C2497759D009A9594 /* LoginVC.swift */,
 				EE1E52842497AE2E009A9594 /* MeVC.swift */,
 				EE1E52862497B7E7009A9594 /* CreatePostVC.swift */,
+				EE1E528E249900CA009A9594 /* CreateGroupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				EE1E527E24977671009A9594 /* InsetTextField.swift */,
 				EE1E528024977A9F009A9594 /* ShadowView.swift */,
 				EE1E528A2497D3FA009A9594 /* FeedCell.swift */,
+				EE1E52902499050D009A9594 /* UserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				EE1E525824968922009A9594 /* FeedVC.swift in Sources */,
 				EE1E52872497B7E7009A9594 /* CreatePostVC.swift in Sources */,
 				EE1E527D2497759D009A9594 /* LoginVC.swift in Sources */,
+				EE1E528F249900CA009A9594 /* CreateGroupVC.swift in Sources */,
 				EE1E525424968922009A9594 /* AppDelegate.swift in Sources */,
 				EE1E52852497AE2E009A9594 /* MeVC.swift in Sources */,
 				EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */,
@@ -302,6 +309,7 @@
 				EE1E527924969858009A9594 /* DataService.swift in Sources */,
 				EE1E527B24977591009A9594 /* AuthVC.swift in Sources */,
 				EE1E528B2497D3FA009A9594 /* FeedCell.swift in Sources */,
+				EE1E52912499050D009A9594 /* UserCell.swift in Sources */,
 				EE1E525624968922009A9594 /* SceneDelegate.swift in Sources */,
 				EE1E526024968922009A9594 /* ChatApp.xcdatamodeld in Sources */,
 				EE1E527F24977671009A9594 /* InsetTextField.swift in Sources */,

@@ -95,4 +95,47 @@ class DataService{
             handler(msgArray)
         }
     }
+    
+    func getemail(forSearchQuery query: String, handler: @escaping (_ emailArr: [String]) -> ()){
+        var emailArray = [String]()
+        
+        // observe will be to track changes anywhere in the user child, including the sub child
+        REF_USERS.observe(.value) { (dataSnapShot) in
+            
+            guard let users = dataSnapShot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for usr in users{
+                let email = usr.childSnapshot(forPath: "email").value as! String
+                
+                if email.contains(query) && email != Auth.auth().currentUser?.email{
+                    emailArray.append(email)
+                }
+            }
+            
+            handler(emailArray)
+        }
+    }
+    
+    func getIds(forUsernames usernames : [String], handler: @escaping (_ users: [String]) ->()){
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapShot) in
+            var idArr = [String]()
+            guard let usersnapshot = userSnapShot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for user in usersnapshot{
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if usernames.contains(email){
+                    idArr.append(user.key)
+                }
+            }
+            
+            handler(idArr)
+        }
+    }
+    
+    func createGroup(withTitle title: String, withDescription description: String, withMembers members : [String], handler: @escaping (_ groupCreated: Bool) -> ()){
+        
+        REF_GROUPS.childByAutoId().updateChildValues(["title": title, "description": description, "members": members])
+        handler(true)
+    }
 }
