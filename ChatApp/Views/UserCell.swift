@@ -38,8 +38,6 @@ class UserCell: UITableViewCell {
                 self.checkImg.isHidden = true
                 showing = false
             }
-        }else{
-            self.checkImg.isHidden = true
         }
     }
 

@@ -30,6 +30,10 @@
 		EE1E528D2497D625009A9594 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528C2497D625009A9594 /* Feed.swift */; };
 		EE1E528F249900CA009A9594 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E528E249900CA009A9594 /* CreateGroupVC.swift */; };
 		EE1E52912499050D009A9594 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E52902499050D009A9594 /* UserCell.swift */; };
+		EE79D37C249A7E3300F49986 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79D37B249A7E3300F49986 /* GroupCell.swift */; };
+		EE79D37E249A80AA00F49986 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79D37D249A80AA00F49986 /* Groups.swift */; };
+		EE79D380249AA1A200F49986 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79D37F249AA1A200F49986 /* GroupFeedCell.swift */; };
+		EE79D382249AA2FE00F49986 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79D381249AA2FE00F49986 /* GroupFeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		EE1E528C2497D625009A9594 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		EE1E528E249900CA009A9594 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		EE1E52902499050D009A9594 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		EE79D37B249A7E3300F49986 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		EE79D37D249A80AA00F49986 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		EE79D37F249AA1A200F49986 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		EE79D381249AA2FE00F49986 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 				EE1E52842497AE2E009A9594 /* MeVC.swift */,
 				EE1E52862497B7E7009A9594 /* CreatePostVC.swift */,
 				EE1E528E249900CA009A9594 /* CreateGroupVC.swift */,
+				EE79D381249AA2FE00F49986 /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +159,8 @@
 				EE1E528024977A9F009A9594 /* ShadowView.swift */,
 				EE1E528A2497D3FA009A9594 /* FeedCell.swift */,
 				EE1E52902499050D009A9594 /* UserCell.swift */,
+				EE79D37B249A7E3300F49986 /* GroupCell.swift */,
+				EE79D37F249AA1A200F49986 /* GroupFeedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1E528C2497D625009A9594 /* Feed.swift */,
+				EE79D37D249A80AA00F49986 /* Groups.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE79D380249AA1A200F49986 /* GroupFeedCell.swift in Sources */,
 				EE1E52892497BCD6009A9594 /* UIViewExt.swift in Sources */,
 				EE1E525A24968922009A9594 /* GroupsVC.swift in Sources */,
+				EE79D37C249A7E3300F49986 /* GroupCell.swift in Sources */,
+				EE79D37E249A80AA00F49986 /* Groups.swift in Sources */,
 				EE1E525824968922009A9594 /* FeedVC.swift in Sources */,
 				EE1E52872497B7E7009A9594 /* CreatePostVC.swift in Sources */,
 				EE1E527D2497759D009A9594 /* LoginVC.swift in Sources */,
@@ -306,6 +321,7 @@
 				EE1E528124977A9F009A9594 /* ShadowView.swift in Sources */,
 				EE1E528324977D06009A9594 /* AuthService.swift in Sources */,
 				EE1E528D2497D625009A9594 /* Feed.swift in Sources */,
+				EE79D382249AA2FE00F49986 /* GroupFeedVC.swift in Sources */,
 				EE1E527924969858009A9594 /* DataService.swift in Sources */,
 				EE1E527B24977591009A9594 /* AuthVC.swift in Sources */,
 				EE1E528B2497D3FA009A9594 /* FeedCell.swift in Sources */,

@@ -45,7 +45,8 @@ class DataService{
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, uploadComplete: @escaping (_ status: Bool) -> ()){
         
         if groupKey != nil{
-            // send to group ref
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            uploadComplete(true)
         }else{
             REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
             uploadComplete(true)
@@ -54,16 +55,6 @@ class DataService{
     }
     
     func getUsername(forUid uid: String, handler: @escaping (_ username: String) -> ()){
-//        REF_USERS.observeSingleEvent(of: .value) { (userSnapShot) in
-//            guard let usrObj = userSnapShot.children.allObjects as? [DataSnapshot] else {return}
-//
-//            for user in usrObj{
-//                if user.key == uid{
-//                    handler((user.childSnapshot(forPath: "email") as! String))
-//                }
-//            }
-//        }
-        
         REF_USERS.observeSingleEvent(of: .value) { (DataSnapshot) in
             
             guard let usrobj = DataSnapshot.children.allObjects as? [DataSnapshot] else {return}
@@ -93,6 +84,27 @@ class DataService{
             }
             
             handler(msgArray)
+        }
+    }
+    
+    func getAllGroupMessages(desiredGroup group: Groups, handler: @escaping (_ msgArr: [Feed]) -> ()){
+        
+        var grpmsg = [Feed]()
+        
+        REF_GROUPS.child(group.groupKey).child("messages").observeSingleEvent(of: .value) { (groupSnapShot) in
+            
+            guard let grpSnap = groupSnapShot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for msg in grpSnap{
+                let content = msg.childSnapshot(forPath: "content").value as! String
+                let senderId = msg.childSnapshot(forPath: "senderId").value as! String
+                
+                let message = Feed(content: content, senderId: senderId)
+                
+                grpmsg.append(message)
+            }
+            
+            handler(grpmsg)
         }
     }
     
@@ -137,5 +149,48 @@ class DataService{
         
         REF_GROUPS.childByAutoId().updateChildValues(["title": title, "description": description, "members": members])
         handler(true)
+    }
+    
+    func getEmailsFor(group: Groups, handler: @escaping (_ emails: [String]) -> ()){
+        var emailArr = [String]()
+        
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapShot) in
+            
+            guard let usersnap = userSnapShot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for user in usersnap{
+                if group.groupMembers.contains(user.key){
+                    let email = user.childSnapshot(forPath: "email").value as! String
+                    
+                    emailArr.append(email)
+                }
+            }
+            
+            handler(emailArr)
+        }
+    }
+    
+    func getGroups(handler: @escaping (_ groupArr: [Groups]) -> ()){
+        var groupsarray = [Groups]()
+        
+        REF_GROUPS.observeSingleEvent(of: .value) { (groupDatashot) in
+            
+            guard let groupsnapshot = groupDatashot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for groups in groupsnapshot{
+                let memArr = groups.childSnapshot(forPath: "members").value as! [String]
+                
+                if memArr.contains(Auth.auth().currentUser!.uid){
+                    
+                    let title = groups.childSnapshot(forPath: "title").value as! String
+                    let description = groups.childSnapshot(forPath: "description").value as! String
+                    
+                    let group = Groups(title: title, desc: description, count: "\(memArr.count)", key: groups.key, members: memArr)
+                    
+                    groupsarray.append(group)
+                }
+            }
+            handler(groupsarray)
+        }
     }
 }
